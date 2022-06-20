@@ -1,0 +1,32 @@
+<script>
+//Recebe o preço do produto e calcula o aumento do preço, baseado no seguinte critério:
+//- até 280 (inclusive): aumento de 20%
+//- até 700 (inclusive): aumento de 15%
+//- até 1500 (inclusive): aumento de 10%
+//- acima de 1500: aumento de 5%
+//Informe: o preço atual, o percentual de aumento, o valor do aumento e o novo preço, todos com duas casas decimais.
+
+const preco = Number(prompt("Informe o valor do produto: "))
+
+let aumento
+if (preco <= 280) {
+    aumento = preco * 0.2 + preco
+    document.write(`O aumento vai ser de 20% </br> Novo valor: ${aumento}`)
+} else if (preco <= 700) {
+    aumento = preco * 0.15 + preco
+    document.write(`O aumento vai ser de 15% </br> Novo valor: ${aumento}`)
+} else if (preco <= 1500) {
+    aumento = preco * 0.1 + preco
+    document.write(`O aumento vai ser de 10% </br> Novo valor: ${aumento}`)
+} else if (preco > 1500) {
+    aumento = preco * 0.05 + preco
+    document.write(`O aumento vai ser de 5% </br> Novo valor: ${aumento}`)
+}
+
+
+
+
+
+
+
+</script>

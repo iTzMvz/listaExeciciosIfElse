@@ -1,0 +1,28 @@
+<script>
+//Calcule as raízes de uma equação do segundo grau, na forma ax**2 + bx + c. A função recebe a, b e c e faz as consistências, informando ao usuário nas seguintes situações:
+//- Se o usuário informar o valor de A igual a zero é uma equaçao do 1o grau.
+//- Se o delta calculado for negativo, a equação não possui raízes reais.
+//- Se o delta calculado for igual a zero a equação possui apenas uma raiz real. 
+//- Se o delta for positivo, a equação possui duas raízes reais.
+
+const a = Number(prompt("Informe um valor"))
+const b = Number(prompt("Informe outro valor"))
+const c = Number(prompt("Informe o ultimo valor"))
+
+const delta = b ** 2 - 4 * a * c
+
+
+if (a === 0) {
+    document.write("É uma equação de primeiro grau")
+} else if (delta < 0) {
+    document.write("A equação não possui raízes reais")
+} else if (delta === 0) {
+    const x = b * -1 / (2 * a)
+    document.write(`A equação possui uma raiz real</br> ${x}`)
+} else {
+    const xNegativo = b * -1 - Math.sqrt(delta)
+    const xPositivo = b * -1 + Math.sqrt(delta)
+    document.write(`A equação possui duas raízes reais</br> ${xNegativo.toFixed(2)}</br>${xPositivo.toFixed(2)}`)
+}
+
+</script>
